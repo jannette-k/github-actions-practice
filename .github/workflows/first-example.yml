@@ -8,14 +8,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Welcome Message
-        run: echo "My first Github actions job"
+      - name: List and Read Files
+        run: |
+            echo "My first Github actions job"
+            ls -ltra
+            cat README.md
+      - name: General ASCII Artwork
+        run: cowsay -f dragon "RUN FOR COVER, I AM A DRAGON....RAWRR" >> dragon.txt #cowasay is a thord part library
 
-      - name: List Files
-        run: ls
 
-      - name: Read Files
-        run: cat README.md
+
 
 
 
