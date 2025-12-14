@@ -18,6 +18,8 @@ jobs:
         run: sleep 30
 
   Test_job_2:
+    needs: build_job_1
+
     runs-on: ubuntu-latest
 
     steps:
@@ -29,6 +31,8 @@ jobs:
 
 
   Deploy_job_3:
+    needs: Test_job_2
+    
     runs-on: ubuntu-latest
 
     steps:
