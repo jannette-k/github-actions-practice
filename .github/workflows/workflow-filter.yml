@@ -14,9 +14,7 @@ on:
             - README.md
 
         branches:
-            - main    
-
-        
+            - main         
 jobs:
     hello:
         runs-on: ubuntu-latest
